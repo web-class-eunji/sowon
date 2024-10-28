@@ -8,8 +8,12 @@ let totalItems = items.length; // 전체 슬라이드 수를 계산해 변수에
 let autoSlideInterval; // 자동 슬라이드를 위한 변수를 선언합니다.
 
 const firstClone = items[0].cloneNode(true); // 첫 번째 슬라이드를 복제합니다.
+const secondClone = items[1].cloneNode(true); // 두 번째 슬라이드를 복제합니다.
+const thirdClone = items[2].cloneNode(true); // 세 번째 슬라이드를 복제합니다.
 const lastClone = items[totalItems - 1].cloneNode(true); // 마지막 슬라이드를 복제합니다.
 carousel.appendChild(firstClone); // 첫 번째 슬라이드 복제본을 리스트 맨 끝에 추가합니다.
+carousel.appendChild(secondClone);
+carousel.appendChild(thirdClone);
 carousel.insertBefore(lastClone, items[0]); // 마지막 슬라이드 복제본을 리스트 맨 앞에 추가합니다.
 
 let isTransitioning = false; // 트랜지션(슬라이드 이동 중인지) 상태를 확인하기 위한 변수입니다.
